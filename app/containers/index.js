@@ -41,6 +41,7 @@ class App extends Component{
         });
     }
 }
+//页面一加载 就将cityName存入
 export default connect(
     state => {
         return {}
