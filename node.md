@@ -35,3 +35,10 @@ $ npm install less --save
 ```
 $ npm install swipe-js-iso react-swipe --save
 ```
+
+## redux
+redux react-redux
+- state 集中存放的状态
+- store 存储状态的  唯一的
+- action 用户触发的动作
+- reducer 来更改状态
