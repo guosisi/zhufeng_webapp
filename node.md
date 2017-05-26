@@ -19,9 +19,19 @@ $ npm install koa koa-router --save
 $ npm install whatwg-fetch es6-promise --save
 ```
 
-
+## less
+```
+$ npm install less --save
+```
 ## 目录结构
 - containers 智能组件（聪明的组件）
     - 每一个文件夹都是一个页面级的组件
         - subpage 代表的是当前页面级组件中包含的智能组件
 - components 木偶组件 （愚蠢的组件）
+
+
+
+## 轮播图
+```
+$ npm install swipe-js-iso react-swipe --save
+```

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start":"webpack-dev-server --colors --port 3001 --open",
-      "build":"webpack -p"
+    "start": "webpack-dev-server --colors --port 3001 --open",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -40,7 +40,9 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
+    "react-swipe": "^5.0.8",
     "redux": "^3.6.0",
+    "swipe-js-iso": "^2.0.3",
     "whatwg-fetch": "^2.0.3"
   }
 }
