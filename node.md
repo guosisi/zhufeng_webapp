@@ -16,5 +16,5 @@ $ npm install koa koa-router --save
 ```
 ## fetch
 ```
-$ npm install whatwg-fetch es-promise --save
+$ npm install whatwg-fetch es6-promise --save
 ```
