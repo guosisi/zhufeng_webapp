@@ -18,7 +18,7 @@ export default class LoadMore extends Component{
     componentDidMount(){
         this.fn = () => {
            //节流
-           clearTimeout(this.timer)
+           clearTimeout(this.timer);
            this.timer = setTimeout(()=>{
                //这里是要执行的逻辑
                //这里执行加载的方法
