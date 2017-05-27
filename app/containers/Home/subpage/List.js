@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {getList} from '../../../fetch/home';
+import ListItem from "../../../components/ListItem/index";
 export default class List extends Component{
     constructor(){
         super();
@@ -11,7 +12,11 @@ export default class List extends Component{
     render(){
         return (
             <div>
-                {this.state.data.length}
+                {this.state.data.length?
+                this.state.data.map((item,index)=>(
+                    <ListItem data={item} key={index}/>
+                )):
+                <div>正在加载</div>}
             </div>
         )
     }
@@ -19,7 +24,6 @@ export default class List extends Component{
     componentDidMount(){
         //获取数据
         getList(this.props.cityName,0).then(res=>res.json()).then(({data,hasMore})=>{
-            console.log(data);
             this.setState({
                 data,
                 hasMore
