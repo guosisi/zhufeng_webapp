@@ -19,7 +19,11 @@ class City extends Component{
     changeCity(city){ //要更改城市的方法
         this.props.actions.update({
             cityName:city
-        })
+        });
+
+        //city页面是通过路由显示的，会在当前组件的props上增加一个history方法
+        //跳转至首页
+        this.props.history.push('/')
     }
 }
 export default connect(
