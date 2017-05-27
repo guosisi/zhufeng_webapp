@@ -8,7 +8,8 @@ export default class List extends Component{
         this.state = {
             hasMore:true,
             data:[],
-            index:0// 当前加载的页码
+            index:0,// 当前加载的页码
+            isLoading:true //默认加载中
         }
     }
     render(){
@@ -20,7 +21,7 @@ export default class List extends Component{
                 )):
                 <div>正在加载</div>}
 
-                <LoadMore hasMore={this.state.hasMore} loadMoreFn = {this.loadMore.bind(this)}/>
+                <LoadMore hasMore={this.state.hasMore} loadMoreFn = {this.loadMore.bind(this)} isLoading={this.state.isLoading}/>
             </div>
         )
     }
@@ -34,13 +35,15 @@ export default class List extends Component{
         result.then(res=>res.json()).then(({data,hasMore})=>{
             this.setState({
                 data:[...this.state.data,...data],
-                hasMore
+                hasMore,
+                isLoading:false
             });
         })
     }
     loadMore(){ //加载更多的方法
         this.setState({
-            index:this.state.index + 1
+            index:this.state.index + 1,
+            isLoading:true
         },()=>{
             this.processData(getList(this.props.cityName,this.state.index));
         });
